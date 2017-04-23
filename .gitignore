@@ -1,0 +1,47 @@
+*.class
+.classpath
+.project
+.settings/
+
+target/
+
+# Ignore OS generated files #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+.~lock.*
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# IntelliJ Files
+.idea/
+*.ipr
+*.iws
+*.iml
+
+# Eclipse Files
+.classpath
+.project
+
+# Build outputs
+target/
+reports/
+
+# Vagrant outputs
+.vagrant
+*.rpm
+
+# OS hidden files
+.DS_Store
+atlassian-ide-plugin.xml
