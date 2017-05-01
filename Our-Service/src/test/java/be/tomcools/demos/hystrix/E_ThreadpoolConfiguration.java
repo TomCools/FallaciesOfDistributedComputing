@@ -1,4 +1,4 @@
-package be.tomcools.demos;
+package be.tomcools.demos.hystrix;
 
 import com.netflix.hystrix.HystrixCommand;
 import com.netflix.hystrix.HystrixThreadPoolProperties;
