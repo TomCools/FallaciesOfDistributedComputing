@@ -1,0 +1,24 @@
+PORTS:
+Main app:       8080
+External:       9999
+Hystrix-dash:   3333
+Eureka:         8888
+Zuul:           1111
+Config Server:  8081
+
+### Hystrix ###
+new HystrixCommand<String>(HystrixCommand.Setter.withGroupKey(() -> "Pure Hystrix")
+                .andCommandKey(HystrixCommandKey.Factory.asKey("ExternalBackend"))
+
+hystrix.command.HystrixCommandKey.fallback.enabled
+hystrix.command.HystrixCommandKey.execution.isolation.thread.timeoutInMilliseconds
+
+
+### Archaius ###
+
+private static DynamicStringProperty fallBackText =
+            DynamicPropertyFactory.getInstance().getStringProperty("fallback.text", "fallback");
+
+static {
+    System.setProperty("archaius.configurationSource.additionalUrls", "http://localhost:8081/properties");
+}
