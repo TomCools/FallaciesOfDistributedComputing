@@ -2,6 +2,7 @@ package be.tomcools.demos.archaius;
 
 import com.netflix.config.DynamicPropertyFactory;
 import com.netflix.config.DynamicStringProperty;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -18,7 +19,8 @@ public class B_DynamicProperties {
     private DynamicStringProperty property;
 
     @Before
-    public void init() {
+    @After
+    public void setup() {
         property = DynamicPropertyFactory.getInstance()
                 .getStringProperty("conference", "Unknown");
         setConferenceProperty("Devoxxx");
