@@ -4,9 +4,6 @@ import com.netflix.hystrix.HystrixCommand;
 import com.netflix.hystrix.HystrixThreadPoolProperties;
 import org.junit.Test;
 
-/**
- * Created by tomco on 28/04/2017.
- */
 public class E_ThreadpoolConfiguration {
     static class DefaultThreadpoolConfiguration extends HystrixCommand<String> {
         protected DefaultThreadpoolConfiguration() {
@@ -39,6 +36,10 @@ public class E_ThreadpoolConfiguration {
             throw new RuntimeException("Just to showcase Threadpool settings");
         }
     }
+
+
+
+
 
 
     @Test

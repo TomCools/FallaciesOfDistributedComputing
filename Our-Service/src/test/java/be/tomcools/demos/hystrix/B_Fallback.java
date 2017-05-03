@@ -1,6 +1,7 @@
 package be.tomcools.demos.hystrix;
 
 import com.netflix.hystrix.HystrixCommand;
+import com.netflix.hystrix.HystrixCommandProperties;
 import org.junit.Test;
 
 import static org.assertj.core.api.Java6Assertions.assertThat;
@@ -10,7 +11,10 @@ public class B_Fallback {
     static class BasicCommand extends HystrixCommand<String> {
 
         protected BasicCommand() {
-            super(HystrixCommand.Setter.withGroupKey(() -> "TEST"));
+            super(HystrixCommand.Setter.withGroupKey(() -> "TEST")
+                    .andCommandPropertiesDefaults(
+                            HystrixCommandProperties.Setter()
+                                    .withFallbackEnabled(true))); //DEFAULT
         }
 
         @Override
