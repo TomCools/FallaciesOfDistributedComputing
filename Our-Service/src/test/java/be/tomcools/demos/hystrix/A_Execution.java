@@ -39,8 +39,15 @@ public class A_Execution {
 
     @Test
     public void observe() {
-        Observable<String> resultFuture = new SleepCommand().observe();
+        Observable<String> observable = new SleepCommand().observe();
 
-        resultFuture.forEach(System.out::println);
+        observable.subscribe(System.out::println);
+    }
+
+    @Test
+    public void toObservable() {
+        Observable<String> coldObservable = new SleepCommand().toObservable();
+
+        coldObservable.subscribe(System.out::println);
     }
 }
