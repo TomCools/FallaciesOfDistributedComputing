@@ -2,6 +2,7 @@ package be.tomcools;
 
 import be.tomcools.helpers.ExternalService;
 import be.tomcools.helpers.Parameters;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,7 +22,6 @@ public class OurApplication {
     public String queryNormal(final Parameters params) {
         return externalService.callExternalService(params);
     }
-
 
     public static void main(String[] args) {
         SpringApplication.run(OurApplication.class);

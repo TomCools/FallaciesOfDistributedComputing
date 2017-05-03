@@ -8,7 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>ExternalService</name>
+	<name>Fallacies</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>

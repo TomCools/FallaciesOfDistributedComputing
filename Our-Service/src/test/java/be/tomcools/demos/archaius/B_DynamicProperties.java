@@ -37,7 +37,6 @@ public class B_DynamicProperties {
     public void listenerForDynamicProperties() throws InterruptedException {
         property.addCallback(() -> {
             System.out.println("Doing assertion");
-            assertThat(property.getValue()).isEqualTo("JavaCro");
         });
 
         //RELOADING
