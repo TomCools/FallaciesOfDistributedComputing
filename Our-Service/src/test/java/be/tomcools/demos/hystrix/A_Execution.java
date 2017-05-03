@@ -17,7 +17,7 @@ public class A_Execution {
 
         @Override
         protected String run() throws Exception {
-            Thread.sleep(1000);
+            Thread.sleep(500);
             return "Done!";
         }
     }
