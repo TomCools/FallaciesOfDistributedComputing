@@ -38,12 +38,9 @@ public class A_Execution {
     }
 
     @Test
-    public void observe() throws ExecutionException, InterruptedException {
+    public void observe() {
         Observable<String> resultFuture = new SleepCommand().observe();
 
         resultFuture.forEach(System.out::println);
     }
-
-
-
 }
