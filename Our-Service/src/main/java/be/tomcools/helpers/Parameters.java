@@ -1,8 +1,5 @@
 package be.tomcools.helpers;
 
-/**
- * Created by tomco on 28/04/2017.
- */
 public class Parameters {
     private String delay;
     private String failChance;
