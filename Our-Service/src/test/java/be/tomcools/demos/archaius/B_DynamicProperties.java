@@ -23,16 +23,16 @@ public class B_DynamicProperties {
     public void setup() {
         property = DynamicPropertyFactory.getInstance()
                 .getStringProperty("conference", "Unknown");
-        setConferenceProperty("Devoxxx");
+        setConferenceProperty("javasi");
     }
 
     @Test
     public void dynamicPropertiesUseLatestVerionOfProperty() throws InterruptedException {
         Thread.sleep(2000);
-        setConferenceProperty("JavaCro");
+        setConferenceProperty("JavaSi2017");
         Thread.sleep(2000);
 
-        assertThat(property.getValue()).isEqualTo("JavaCro");
+        assertThat(property.getValue()).isEqualTo("JavaSi2017");
     }
 
     @Test
@@ -43,7 +43,7 @@ public class B_DynamicProperties {
 
         //RELOADING
         Thread.sleep(2000);
-        setConferenceProperty("JavaCro");
+        setConferenceProperty("JavaSi2017");
         Thread.sleep(2000);
     }
 

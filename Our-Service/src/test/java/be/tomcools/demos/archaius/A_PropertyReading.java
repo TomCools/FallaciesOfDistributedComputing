@@ -2,11 +2,15 @@ package be.tomcools.demos.archaius;
 
 import com.netflix.config.DynamicPropertyFactory;
 import com.netflix.config.DynamicStringProperty;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
+import static be.tomcools.demos.archaius.helper.PropertyHelper.setConferenceProperty;
 import static org.assertj.core.api.Java6Assertions.assertThat;
 
 public class A_PropertyReading {
+
     @Test
     public void dynamicPropertiesUsesDefaultWhenPropertyNotPresent() {
         DynamicStringProperty property = DynamicPropertyFactory.getInstance()
@@ -36,6 +40,6 @@ public class A_PropertyReading {
 
         String propertyValue = property.getValue();
 
-        assertThat(propertyValue).isEqualTo("Devoxxx");
+        assertThat(propertyValue).isEqualTo("javasi");
     }
 }

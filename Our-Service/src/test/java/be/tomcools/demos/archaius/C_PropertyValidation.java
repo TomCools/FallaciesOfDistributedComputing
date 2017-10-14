@@ -23,7 +23,7 @@ public class C_PropertyValidation {
     public void init() {
         property = DynamicPropertyFactory.getInstance()
                 .getStringProperty("conference", "Unknown");
-        setConferenceProperty("Devoxxx");
+        setConferenceProperty("javasi");
     }
 
     @Test
@@ -37,9 +37,9 @@ public class C_PropertyValidation {
         });
 
         Thread.sleep(1000);
-        setConferenceProperty("JavaCro");
+        setConferenceProperty("Devoxxx");
         Thread.sleep(1000);
 
-        assertThat(property.getValue()).isEqualTo("JavaCro");
+        assertThat(property.getValue()).isEqualTo("Devoxxx");
     }
 }
