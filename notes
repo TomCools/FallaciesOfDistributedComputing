@@ -22,3 +22,9 @@ private static DynamicStringProperty fallBackText =
 static {
     System.setProperty("archaius.configurationSource.additionalUrls", "http://localhost:8081/properties");
 }
+
+hystrix:
+  command:
+    CallWithHystrix:
+      fallback:
+        enabled: false
