@@ -2,7 +2,6 @@ package be.tomcools;
 
 import be.tomcools.helpers.ExternalService;
 import be.tomcools.helpers.Parameters;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
