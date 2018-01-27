@@ -20,7 +20,7 @@
 
 	<modules>
 		<module>ExternalService</module>
-		<module>Our-Service</module>
+		<module>OurService</module>
 	</modules>
 
 	<properties>
